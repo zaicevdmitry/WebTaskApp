@@ -67,8 +67,8 @@
       <file leaf-file-name="index.xhtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3939394" vertical-offset="0" max-vertical-offset="561">
-              <caret line="13" column="81" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45454547" vertical-offset="0" max-vertical-offset="561">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,9 +116,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org.dima.project/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/org.dima.project/login.java" />
         <option value="$PROJECT_DIR$/src/main/java/org.dima.project/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
       </list>
     </option>
   </component>
@@ -415,12 +415,12 @@
       <changelist id="18a2c846-6b92-414f-8b78-2907e259c775" name="Default" comment="" />
       <created>1396875558374</created>
       <updated>1396875558374</updated>
-      <workItem from="1396884437419" duration="779000" />
+      <workItem from="1396884437419" duration="788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="779000" />
+    <option name="totallyTimeSpent" value="788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -569,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3939394" vertical-offset="0" max-vertical-offset="561">
-          <caret line="13" column="81" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.45454547" vertical-offset="0" max-vertical-offset="561">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
