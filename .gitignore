@@ -1,6 +1,12 @@
-.settings
+webTaskApp/.settings
+webTaskApp/target
+webTaskApp/.project
+webTaskApp/.classpath
+Work
+my-app
+webTaskApp/.idea
+.idea
 target
 .project
-.classpath
-Work
-.idea
+
+
