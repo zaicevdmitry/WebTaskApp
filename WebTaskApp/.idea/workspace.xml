@@ -72,8 +72,8 @@
       <file leaf-file-name="index.xhtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5368421" vertical-offset="0" max-vertical-offset="570">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.23859648" vertical-offset="0" max-vertical-offset="570">
+              <caret line="8" column="47" selection-start-line="7" selection-start-column="41" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -793,12 +793,12 @@
       <workItem from="1396939716127" duration="178000" />
       <workItem from="1396939898534" duration="1970000" />
       <workItem from="1396942010621" duration="139000" />
-      <workItem from="1396942161187" duration="2229000" />
+      <workItem from="1396942161187" duration="2467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5254000" />
+    <option name="totallyTimeSpent" value="5492000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1093,8 +1093,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5368421" vertical-offset="0" max-vertical-offset="570">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.23859648" vertical-offset="0" max-vertical-offset="570">
+          <caret line="8" column="47" selection-start-line="7" selection-start-column="41" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
