@@ -45,6 +45,26 @@
           <artifactId>jsp-api</artifactId>
           <version>2.1</version>
       </dependency>
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-core</artifactId>
+          <version>4.1.9.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.codehaus.plexus</groupId>
+          <artifactId>plexus-io</artifactId>
+          <version>2.0.6</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.derby</groupId>
+          <artifactId>derby</artifactId>
+          <version>10.9.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>ch.ethz.ganymed</groupId>
+          <artifactId>ganymed-ssh2</artifactId>
+          <version>build210</version>
+      </dependency>
 
   </dependencies>
   <build>
