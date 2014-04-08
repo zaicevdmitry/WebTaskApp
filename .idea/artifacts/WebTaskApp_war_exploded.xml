@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WebTaskApp:war exploded">
+    <output-path>$PROJECT_DIR$/target/WebTaskApp</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="WebTaskApp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WebTaskApp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:4.0" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.1.11" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.1.11" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
