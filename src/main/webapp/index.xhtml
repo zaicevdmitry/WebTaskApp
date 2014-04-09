@@ -12,20 +12,23 @@
 </h:head>
 
 <h:body>
-    <h1>Hello</h1>
+    <h3>Please enter Login and Password</h3>
 
     <h:form id="loginForm">
         <f:facet name = "header">Login</f:facet>
         <div class = "dialog">
-            <h:panelGrid columns="2" rowClasses="prop" columnClasses="name,value">
-                <h:outputLabel value="Username" for="username"/>
-                <h:inputText id = "username" value="#{loginBean.username}" />
-                <h:outputLabel value="Password" for ="password"/>
-                <h:inputText id ="password" value="#{loginBean.password}" required="true" label="password"> </h:inputText>
-            </h:panelGrid>
+            <p:panelGrid columns="2" rowClasses="prop" columnClasses="name,value">
+                <p:outputLabel value="Password" for ="password"/>
+                <p:inputText id ="password" value="#{login.password}" required="true" label="password"/>
+                <p:outputLabel value="Username" for="username"/>
+                <p:inputText id = "username" value="#{login.username}" />
+
+            </p:panelGrid>
         </div>
         <div class ="actionButtons">
-            <h:commandButton id = "submit" value="Login" action="#{loginBean.login}" oncomplete="handleLoginRequest(xhr, status, args)"/>
+
+            <p:commandButton id = "submit"  value="Login" action="#{login.login()}" />
+
         </div>
 
     </h:form>

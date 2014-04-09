@@ -9,15 +9,19 @@ import sun.security.krb5.Credentials;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.io.Serializable;
 import java.security.Identity;
 
 /**
  * Created by dmitry.zaicev on 07.04.14.
  */
-public class Login {
+public class Login implements Serializable {
     private String username;
-
+    private int userID = 0;
     private String password;
+    private boolean value1;
+    private boolean value2;
 
     public String getUsername() {
         return username;
@@ -35,20 +39,43 @@ public class Login {
         this.password = password;
     }
 
-    public void login(ActionEvent actionEvent) throws IllegalArgumentException{
+    public int getUserID() {
+        return userID;
+    }
+    public boolean getValue2(){return value2;}
+    public void setValue2(boolean value2){this.value2 = value2;}
+
+    public void login() throws IOException {
         RequestContext context = RequestContext.getCurrentInstance();
         FacesMessage msg = null;
         boolean loggedIn = false;
 
-        if(username != null  && username.equals("admin") && password != null  && password.equals("admin")) {
+        if(username != null  & username.equals("admin") & password != null  & password.equals("admin")) {
             loggedIn = true;
             msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
+
+            RequestContext.getCurrentInstance().showMessageInDialog(msg);
+            try {
+                FacesContext.getCurrentInstance().getExternalContext().redirect("task.xhtml");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } else {
             loggedIn = false;
             msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");
         }
 
-        FacesContext.getCurrentInstance().addMessage(null, msg);
         context.addCallbackParam("loggedIn", loggedIn);
+
     }
+
+
+    public void addMessage() {
+
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome " + this.username));
+        String summary = value2 ? "Checked" : "Unchecked";
+
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(summary));
+    }
+
 }
