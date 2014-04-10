@@ -1,49 +1,32 @@
 package org.dima.project;
 
 
-import ch.ethz.ssh2.Connection;
-import org.hibernate.Session;
 import org.primefaces.context.RequestContext;
-import sun.security.krb5.Credentials;
+import org.primefaces.event.RowEditEvent;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import java.awt.event.ActionEvent;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.Serializable;
-import java.security.Identity;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by dmitry.zaicev on 07.04.14.
  */
+@ManagedBean(name = "userController")
+@SessionScoped
 public class Login implements Serializable {
+
     private String username;
-    private int userID = 0;
     private String password;
-    private boolean value1;
-    private boolean value2;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getUserID() {
-        return userID;
-    }
-    public boolean getValue2(){return value2;}
-    public void setValue2(boolean value2){this.value2 = value2;}
+    private List<String> taskList;
+    private String name;
 
     public void login() throws IOException {
         RequestContext context = RequestContext.getCurrentInstance();
@@ -65,17 +48,44 @@ public class Login implements Serializable {
             msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");
         }
 
+        FacesContext session = FacesContext.getCurrentInstance();
+        session.getExternalContext().getSessionMap().put("user", username);
+
         context.addCallbackParam("loggedIn", loggedIn);
 
     }
+    public Login() {
+
+        taskList = new ArrayList<String>();
+    }
+    public void addTask() throws NullPointerException{
+//        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+
+        taskList.add(name);
+    }
 
 
-    public void addMessage() {
-
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome " + this.username));
-        String summary = value2 ? "Checked" : "Unchecked";
-
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(summary));
+    public String getUsername() {
+        FacesContext session = FacesContext.getCurrentInstance();
+        return (String) session.getExternalContext().getSessionMap().get("user");
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public List<String> getTaskList() {
+        return taskList;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
     }
 
 }

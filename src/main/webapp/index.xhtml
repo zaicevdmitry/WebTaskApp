@@ -11,17 +11,18 @@
 <h:head>
 </h:head>
 
-<h:body>
+<h:body >
     <h3>Please enter Login and Password</h3>
 
-    <h:form id="loginForm">
+    <h:form id="loginForm" >
         <f:facet name = "header">Login</f:facet>
         <div class = "dialog">
             <p:panelGrid columns="2" rowClasses="prop" columnClasses="name,value">
-                <p:outputLabel value="Password" for ="password"/>
-                <p:inputText id ="password" value="#{login.password}" required="true" label="password"/>
+
                 <p:outputLabel value="Username" for="username"/>
                 <p:inputText id = "username" value="#{login.username}" />
+                <p:outputLabel value="Password" for ="password"/>
+                <p:inputText id ="password" value="#{login.password}" required="true" label="password"/>
 
             </p:panelGrid>
         </div>
