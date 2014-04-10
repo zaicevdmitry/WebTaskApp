@@ -17,18 +17,21 @@
     <h:form id="loginForm" >
         <f:facet name = "header">Login</f:facet>
         <div class = "dialog">
-            <p:panelGrid columns="2" rowClasses="prop" columnClasses="name,value">
+            <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+            <p:panelGrid columns="2" rowClasses="prop" columnClasses="user,pass">
 
                 <p:outputLabel value="Username" for="username"/>
                 <p:inputText id = "username" value="#{login.username}" />
+
                 <p:outputLabel value="Password" for ="password"/>
-                <p:inputText id ="password" value="#{login.password}" required="true" label="password"/>
+                <p:inputText id ="password" value="#{login.password}" required="true"  label="password"/>
+
 
             </p:panelGrid>
         </div>
         <div class ="actionButtons">
 
-            <p:commandButton id = "submit"  value="Login" action="#{login.login()}" />
+            <p:commandButton id = "submit" value="Login" actionListener="#{login.login()}"/>
 
         </div>
 

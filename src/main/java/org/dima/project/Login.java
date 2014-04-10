@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * Created by dmitry.zaicev on 07.04.14.
  */
-@ManagedBean(name = "userController")
+@ManagedBean(name = "user")
 @SessionScoped
 public class Login implements Serializable {
 
@@ -30,14 +30,11 @@ public class Login implements Serializable {
 
     public void login() throws IOException {
         RequestContext context = RequestContext.getCurrentInstance();
-        FacesMessage msg = null;
         boolean loggedIn = false;
 
         if(username != null  & username.equals("admin") & password != null  & password.equals("admin")) {
             loggedIn = true;
-            msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
-
-            RequestContext.getCurrentInstance().showMessageInDialog(msg);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"Welcome!!!", username));
             try {
                 FacesContext.getCurrentInstance().getExternalContext().redirect("task.xhtml");
             } catch (IOException e) {
@@ -45,7 +42,7 @@ public class Login implements Serializable {
             }
         } else {
             loggedIn = false;
-            msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Errore!!!", " Please enter valid Login and Password"));
         }
 
         FacesContext session = FacesContext.getCurrentInstance();
